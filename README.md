@@ -19,6 +19,79 @@ npm install
 # Setup environment variables
 cp .env.example .env
 # Edit .env with your database credentials
+# Environment Configuration
+
+## Server Config
+| Variable | Value | Description |
+|----------|-------|-------------|
+| `PORT` | `3000` | Port the server runs on |
+| `NODE_ENV` | `development` | Environment mode |
+
+## MySQL Database
+| Variable | Value | Description |
+|----------|-------|-------------|
+| `DB_HOST` | `s2.freesqldatabase.com` | Database host |
+| `DB_NAME` | `s2813925` | Database name |
+| `DB_USER` | `sql925` | Database user |
+| `DB_PASSWORD` | `3pTay` | Database password |
+| `DB_PORT` | `3306` | Database port |
+
+## Redis
+| Variable | Value | Description |
+|----------|-------|-------------|
+| `REDIS_HOST` | `127.0.0.1a` | Redis host address |
+| `REDIS_PORT` | `1829` | Redis port |
+
+## OAuth2 (Mock)
+| Variable | Value | Description |
+|----------|-------|-------------|
+| `OAUTH_TOKEN_URL` | `https://oauth.mocklab.io/check/token` | OAuth token endpoint |
+| `OAUTH_CLIENT_ID` | `farmal-client` | OAuth client ID |
+| `OAUTH_CLIENT_SECRET` | `farmlokal-set` | OAuth client secret |
+
+## External APIs
+| Variable | Value | Description |
+|----------|-------|-------------|
+| `API_A_BASE_URL` | `https://jsder.typicode.com` | API A base URL |
+| `API_B_WEBHOOK_URL` | `https://webok.site` | Webhook URL for API B |
+
+---
+
+## ⚠️ Important Security Notice
+
+**These are dummy values for demonstration purposes only.**  
+**Do not use these credentials in production.**  
+**Always use secure, unique credentials in real applications.**
+
+### Quick Setup
+1. Copy the example below to `.env` file
+2. Replace with your actual values
+
+### Example `.env` file:
+```bash
+# Server Config
+PORT=3000
+NODE_ENV=development
+
+# MySQL Database
+DB_HOST=your_database_host
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_PORT=3306
+
+# Redis
+REDIS_HOST=your_redis_host
+REDIS_PORT=6379
+
+# OAuth2
+OAUTH_TOKEN_URL=your_oauth_token_url
+OAUTH_CLIENT_ID=your_client_id
+OAUTH_CLIENT_SECRET=your_client_secret
+
+# External APIs
+API_A_BASE_URL=your_api_a_url
+API_B_WEBHOOK_URL=your_webhook_url
 
 # Seed the database
 npm run seed
@@ -247,3 +320,4 @@ curl http://localhost:3000/api/auth/token
 3. **Clean Code** - Modular structure, typed interfaces, meaningful logs
 
 This project demonstrates understanding of building scalable backend services with proper caching, reliability patterns, and clean architecture.
+
